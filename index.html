@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guitars</title>
+  </head>
+  <body>
+    <h1>Guitars</h1>
+    <div id="display"></div>
+
+    <script>
+      let guitars = [
+        { name: "Ibanez Roadstar 2", type: "electric" },
+        { name: "Godin 5th Ave", type: "electric" },
+        { name: "Washburn P2", type: "electric" },
+        { name: "Parker Fly", type: "electric" },
+        { name: "Cole Clark FL2a", type: "acoustic" },
+        { name: "Plasticaster", type: "electric" },
+        { name: "12 string", type: "acoustic" },
+        { name: "camping acoustic", type: "acoustic" },
+        { name: "ESP M107", type: "electric" },
+      ];
+
+      function populateTypes() {
+        let divDisplay = document.getElementById("display");
+        guitars.forEach((guitar) => {
+          let newLine = document.createElement("div");
+          newLine.innerText = guitar.name + " is an " + guitar.type + " guitar";
+          divDisplay.appendChild(newLine);
+        });
+      }
+      populateTypes();
+    </script>
+  </body>
+</html>
